@@ -1,0 +1,285 @@
+/* GRUNDEINSTELLUNGEN */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #263238;
+    background-color: white;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* KOPFZEILE */
+
+.kopfzeile {
+    background-color: #b9dff1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 30px;
+    gap: 20px;
+    min-height: 110px;
+}
+
+.logo-bereich {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-bereich:first-child {
+    justify-content: flex-start;
+}
+
+.logo-bereich:last-child {
+    justify-content: flex-end;
+}
+
+.logo-bereich img {
+    max-width: 100%;
+    max-height: 85px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.jrk-bereich img {
+    background-color: white;
+    padding: 10px 16px;
+    border-radius: 5px;
+}
+
+/* ÜBERSCHRIFTEN */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+}
+
+/* HAUPTINHALT */
+
+/* HAUPTINHALT */
+
+.hauptinhalt {
+    flex: 1;
+    padding: 40px 25px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hauptinhalt h1 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.einleitung {
+    font-size: 18px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* FUSSZEILE */
+
+.fusszeile {
+    background-color: #e1e1e1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 40px;
+    padding: 25px 35px;
+}
+
+.foerderhinweis,
+.quellen {
+    flex: 1;
+}
+
+.fusszeile h3 {
+    margin-top: 0;
+    font-size: 17px;
+}
+
+.fusszeile p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* HANDYANSICHT */
+
+@media (max-width: 700px) {
+
+    .kopfzeile {
+        padding: 10px;
+        gap: 8px;
+        min-height: 80px;
+    }
+
+    .logo-bereich img {
+        max-height: 55px;
+    }
+
+    .jrk-bereich img {
+        padding: 5px;
+    }
+
+    .hauptinhalt {
+        padding: 25px 15px;
+    }
+
+    .hauptinhalt h1 {
+        font-size: 27px;
+    }
+
+
+    .fusszeile {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+}
+
+.footer-rechtliches {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.footer-rechtliches a {
+  display: inline-block;
+  padding: 7px 15px;
+  background-color: #174a78;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.footer-rechtliches a:hover,
+.footer-rechtliches a:focus-visible {
+  background-color: #347db0;
+  color: white;
+}
+
+/*Hauptinhalt*/
+.foto-karte {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  transform: none;
+  transition: none;
+}
+
+.foto-karte:nth-child(even),
+.foto-karte:hover,
+.foto-karte:nth-child(even):hover {
+  transform: none;
+}
+
+/* BILDFLÄCHE */
+
+.foto-rahmen {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #eeeeee;
+  border: none;
+  overflow: hidden;
+}
+
+.foto-rahmen img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: none;
+}
+
+/* PLATZHALTER */
+
+.foto-platzhalter {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777777;
+  font-style: italic;
+}
+
+/* BILDUNTERSCHRIFT */
+
+.foto-karte figcaption {
+  padding: 12px 0;
+  text-align: center;
+  color: #333333;
+}
+
+.foto-karte figcaption h2 {
+  font-family: Georgia, serif;
+  font-size: 19px;
+  margin: 0 0 6px;
+}
+
+.foto-karte figcaption p {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+.foto-galerie {
+  display: grid;
+
+  /* 4 Fotos nebeneinander */
+ grid-template-columns: repeat(4, minmax(0, 220px));
+
+  justify-content: center;
+
+  gap: 25px;
+
+  width: 100%;
+  margin: 30px auto;
+}
+
+/* TABLET - 2 FOTOS NEBENEINANDER */
+
+@media (max-width: 950px) {
+  .foto-galerie {
+    grid-template-columns: repeat(2, minmax(0, 220px));
+  }
+}
+
+/* HANDY - 1 FOTO PRO REIHE */
+
+@media (max-width: 650px) {
+  .foto-galerie {
+    grid-template-columns: minmax(0, 220px);
+  }
+}
+
+
+/* BILDER ANZEIGEN */
+
+.foto-rahmen:has(img[src]:not([src=""])) img {
+  display: block;
+}
+
+/* PLATZHALTER AUSBLENDEN */
+
+.foto-rahmen:has(img[src]:not([src=""]))
+.foto-platzhalter {
+  display: none;
+}

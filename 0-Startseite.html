@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Spurensuche – Startseite</title>
+
+    <link rel="stylesheet" href="0-Startseite.css">
+</head>
+
+<body>
+
+    <!-- KOPFZEILE -->
+    <header class="kopfzeile">
+
+        <div class="logo-bereich jrk-bereich">
+            <img src="JRK-Logo.png" alt="Jugendrotkreuz">
+        </div>
+
+        <div class="logo-bereich">
+            <img src="Projekt-Logo.png" alt="Projektlogo">
+        </div>
+
+        <div class="logo-bereich">
+            <img src="Spurensuche-Logo.png" alt="Spurensuche">
+        </div>
+
+    </header>
+
+    <!-- HAUPTINHALT -->
+    <main class="hauptinhalt">
+
+    <div class="start-inhalt">
+
+        <h1>Als das Wasser alles veränderte</h1>
+
+        <p class="einleitung">
+            Hier wird später der Einführungstext
+            zum Projekt stehen.
+        </p>
+
+        <!-- VORSCHAUFELDER -->
+        <div class="vorschau-container">
+
+            <!-- FELD 1 -->
+            <a href="1-0-facten im vergleich.html" class="vorschau">
+                <div class="bildplatzhalter">
+                    Bild 1
+                </div>
+
+                <div class="vorschau-text">
+                    <h2>Facten im Vergleich</h2>
+                    <p>
+                        Platzhalter für den
+                        Beschreibungstext.
+                    </p>
+                </div>
+            </a>
+
+            <!-- FELD 2 -->
+            <a href="2-0-Maßnahmen.html" class="vorschau">
+                <div class="bildplatzhalter">
+                    Bild 2
+                </div>
+
+                <div class="vorschau-text">
+                    <h2>Maßnahmen</h2>
+                    <p>
+                        Platzhalter für den
+                        Beschreibungstext.
+                    </p>
+                </div>
+            </a>
+
+            <!-- FELD 3 -->
+            <a href="3-0-karte-2002.html" class="vorschau">
+                <div class="bildplatzhalter">
+                    Bild 3
+                </div>
+
+                <div class="vorschau-text">
+                    <h2>Karte Hochwasser 2002</h2>
+                    <p>
+                        Platzhalter für den
+                        Beschreibungstext.
+                    </p>
+                </div>
+            </a>
+
+            <!-- FELD 4 -->
+            <a href="4-0-karte-2013.html" class="vorschau">
+                <div class="bildplatzhalter">
+                    Bild 4
+                </div>
+
+                <div class="vorschau-text">
+                    <h2>Karte Hochwasser 2013</h2>
+                    <p>
+                        Platzhalter für den
+                        Beschreibungstext.
+                    </p>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+    <!-- FUSSZEILE -->
+    <footer class="fusszeile">
+
+        <section class="foerderhinweis">
+            <h3>Förderhinweis</h3>
+            <p>
+                Das Jugendprogramm Spurensuche ist ein Programm der Sächsischen
+                Jugendstiftung und wird aus Steuermitteln finanziert auf 
+                Grundlage des vom Sächsischen Landtag beschlossenen Haushaltes
+                durch das Sächsische Staatsministerium für Soziales, Gesundheit
+                und Gesellschaftlichen Zusammenhalt.
+            </p>
+        </section>
+
+        <section class="quellen">
+            <h3>Quellen</h3>
+            <p>
+                Hier werden die Quellen
+                dieser Seite aufgeführt.
+            </p>
+        </section>
+        
+        <div class="footer-rechtliches">
+  <a href="9-1-impressum.html">Impressum</a>
+  <a href="9-2-datenschutz.html">Datenschutz</a>
+</div>
+
+    </footer>
+<!-- Hinweisfenster Testversion -->
+<div id="testversion-overlay" class="testversion-overlay">
+
+  <div class="testversion-fenster">
+
+    <div class="testversion-symbol">⚠</div>
+
+    <h2>Diese Website befindet sich in der Testphase</h2>
+
+    <p>
+      Die Website zum Projekt Spurensuche: "Als das Wasser alles veränderte" wird
+      derzeit entwickelt und getestet.
+    </p>
+
+    <p>
+      Einige Inhalte und Funktionen sind
+      möglicherweise noch unvollständig
+      oder werden überarbeitet.
+    </p>
+
+    <button type="button" onclick="testversionSchliessen()">
+      Verstanden
+    </button>
+
+  </div>
+
+</div>
+ <script>
+  function testversionSchliessen() {
+    document.getElementById("testversion-overlay")
+      .style.display = "none";
+  }
+</script>
+</body>
+</html>

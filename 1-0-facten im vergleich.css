@@ -1,0 +1,348 @@
+/* GRUNDEINSTELLUNGEN */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #263238;
+    background-color: white;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* KOPFZEILE */
+
+.kopfzeile {
+    background-color: #b9dff1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 30px;
+    gap: 20px;
+    min-height: 110px;
+}
+
+.logo-bereich {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-bereich:first-child {
+    justify-content: flex-start;
+}
+
+.logo-bereich:last-child {
+    justify-content: flex-end;
+}
+
+.logo-bereich img {
+    max-width: 100%;
+    max-height: 85px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.jrk-bereich img {
+    background-color: white;
+    padding: 10px 16px;
+    border-radius: 5px;
+}
+
+/* ÜBERSCHRIFTEN */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+}
+
+/* HAUPTINHALT */
+
+.hauptinhalt {
+    flex: 1;
+    padding: 40px 25px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hauptinhalt h1 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.einleitung {
+    font-size: 18px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* VERGLEICHSBEREICH */
+
+.vergleich-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* EINZELNE VERGLEICHSFELDER */
+
+.vergleich-feld {
+    border: 1px solid #b9dff1;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: white;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.vergleich-feld h2 {
+    background-color: #b9dff1;
+    margin: 0;
+    padding: 20px;
+    font-size: 24px;
+}
+
+/* BILDER */
+
+.bildplatzhalter {
+    background-color: #e4eef4;
+    height: 220px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #55758a;
+    font-size: 18px;
+}
+
+/* TEXTE */
+
+.vergleich-text {
+    padding: 25px;
+    text-align: left;
+}
+
+.vergleich-text h3 {
+    margin-top: 0;
+}
+
+.vergleich-text p {
+    line-height: 1.7;
+}
+
+/* FUSSZEILE */
+
+.fusszeile {
+    background-color: #e1e1e1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 40px;
+    padding: 25px 35px;
+}
+
+.foerderhinweis,
+.quellen {
+    flex: 1;
+}
+
+.fusszeile h3 {
+    margin-top: 0;
+    font-size: 17px;
+}
+
+.fusszeile p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-rechtliches {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.footer-rechtliches a {
+  display: inline-block;
+  padding: 7px 15px;
+  background-color: #174a78;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.footer-rechtliches a:hover,
+.footer-rechtliches a:focus-visible {
+  background-color: #347db0;
+  color: white;
+}
+
+/* HANDYANSICHT */
+
+@media (max-width: 700px) {
+
+    .kopfzeile {
+        padding: 10px;
+        gap: 8px;
+        min-height: 80px;
+    }
+
+    .logo-bereich img {
+        max-height: 55px;
+    }
+
+    .jrk-bereich img {
+        padding: 5px;
+    }
+
+    .hauptinhalt {
+        padding: 25px 15px;
+    }
+
+    .hauptinhalt h1 {
+        font-size: 27px;
+    }
+
+    .vergleich-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .bildplatzhalter {
+        height: 170px;
+    }
+
+    .fusszeile {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+}
+/* Fakten im Vergleich */
+
+.fakten-vergleich {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 15px;
+  box-sizing: border-box;
+}
+
+.fakten-vergleich h1 {
+  text-align: center;
+  font-family: "Courier New", monospace;
+  color: #153b69;
+}
+
+.fakten-einleitung {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.vergleich-tabelle {
+  width: 100%;
+}
+
+/* Dreiteilige Spaltenaufteilung */
+
+.vergleich-kopf,
+.vergleich-zeile {
+  display: grid;
+  grid-template-columns: 1fr 120px 1fr;
+}
+
+/* Überschriften */
+
+.vergleich-kopf > div {
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Faktenfelder */
+
+.fakt-2002,
+.fakt-2013 {
+  padding: 25px 20px;
+  text-align: center;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* Linke Spalte 2002 */
+
+.jahr-2002,
+.fakt-2002 {
+  background-color: #153b69;
+  color: #b9e2f8;
+}
+
+/* Rechte Spalte 2013 */
+
+.jahr-2013,
+.fakt-2013 {
+  background-color: #b9e2f8;
+  color: #153b69;
+}
+
+/* Mittlere Kategoriespalte */
+
+.vergleich-kopf .kategorie,
+.vergleich-zeile .kategorie {
+  background-color: white;
+  color: #153b69;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  overflow-wrap: anywhere;
+}
+
+/* Trennlinien zwischen Kategorien */
+
+.vergleich-zeile > div {
+  border-top: 1px solid rgba(100, 130, 160, 0.25);
+}
+
+/* Anpassung für Smartphones */
+
+@media (max-width: 600px) {
+  .vergleich-kopf,
+  .vergleich-zeile {
+    grid-template-columns: minmax(0, 1fr) 85px minmax(0, 1fr);
+  }
+
+  .vergleich-kopf > div {
+    font-size: 17px;
+    padding: 15px 5px;
+  }
+
+  .fakt-2002,
+  .fakt-2013 {
+    font-size: 14px;
+    padding: 15px 8px;
+  }
+
+  .vergleich-zeile .kategorie {
+    font-size: 12px;
+    padding: 8px 4px;
+  }
+}

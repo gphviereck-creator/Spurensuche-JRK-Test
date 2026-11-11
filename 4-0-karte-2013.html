@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Spurensuche – Hochwasser 2013</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <!-- Eigenes CSS -->
+    <link rel="stylesheet" href="4-0-karte-2013.css">
+</head>
+
+<body>
+
+    <!-- KOPFZEILE -->
+    <header class="kopfzeile">
+
+        <div class="logo-bereich jrk-bereich">
+            <img src="JRK-Logo.png"
+                 alt="Jugendrotkreuz">
+        </div>
+
+        <div class="logo-bereich">
+            <a href="0-Startseite.html">
+                <img src="Projekt-Logo.png"
+                     alt="Zur Startseite">
+            </a>
+        </div>
+
+        <div class="logo-bereich">
+            <img src="Spurensuche-Logo.png"
+                 alt="Spurensuche">
+        </div>
+
+    </header>
+
+    <!-- HAUPTINHALT -->
+    <main class="hauptinhalt">
+
+        <h1>Hochwasser 2013</h1>
+
+        <p class="einleitung">
+            Entdecke die Ereignisse des Hochwassers
+            von 2013 entlang der Mulde.
+        </p>
+
+        <!-- INTERAKTIVE KARTE -->
+        <div id="karte"></div>
+
+    </main>
+
+    <!-- FUSSZEILE -->
+    <footer class="fusszeile">
+
+        <section class="foerderhinweis">
+            <h3>Förderhinweis</h3>
+            <p>
+               Das Jugendprogramm Spurensuche ist ein Programm der Sächsischen
+                Jugendstiftung und wird aus Steuermitteln finanziert auf 
+                Grundlage des vom Sächsischen Landtag beschlossenen Haushaltes
+                durch das Sächsische Staatsministerium für Soziales, Gesundheit
+                und Gesellschaftlichen Zusammenhalt.
+            </p>
+        </section>
+
+        <section class="quellen">
+            <h3>Quellen</h3>
+            <p>
+             <p>
+  Kartengrundlage:
+  © <a href="https://www.openstreetmap.org/copyright"
+       target="_blank" rel="noopener noreferrer">
+    OpenStreetMap-Mitwirkende
+  </a>
+  (ODbL 1.0)<br>
+
+  Interaktive Kartendarstellung:
+  <a href="https://leafletjs.com/"
+     target="_blank" rel="noopener noreferrer">
+    Leaflet
+  </a>
+            </p>
+        </section>
+         <div class="footer-rechtliches">
+  <a href="9-1-impressum.html">Impressum</a>
+  <a href="9-2-datenschutz.html">Datenschutz</a>
+</div>
+
+    </footer>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Eigenes JavaScript -->
+    <script src="4-0-karte-2013.js"></script>
+
+</body>
+</html>
