@@ -1,0 +1,175 @@
+/* ==============================
+   FOTOGALERIE - SPURENSUCHE
+   ============================== */
+
+/*
+  Hier werden die Bilderstrecken
+  und ihre Fotos eingetragen.
+*/
+
+const bilderstrecken = {
+
+  /* GRIMMA 2002 - BILDERSTRECKE 1 */
+
+  "brücke13": [
+
+    {
+      datei: "Grimma-Hängebrücke-2013-1.JPG",
+      titel: "...",
+      beschreibung: "..."
+    },
+
+    {
+      datei: "Grimma-Hängebrücke-2013-2.jpg",
+      titel: "...",
+      beschreibung: "..."
+    },
+
+    {
+      datei: "Grimma-Hängebrücke-2013-3.jpg",
+      titel: "...",
+      beschreibung: "..."
+    },
+
+    {
+      datei: "Grimma-Hängebrücke-2013-4.jpg",
+      titel: "...",
+      beschreibung: "..."
+    },
+
+    {
+      datei: "Grimma-Hängebrücke-2013-5.jpg",
+      titel: "...",
+      beschreibung: "..."
+    },
+
+    {
+      datei: "Grimma-Hängebrücke-2013-6.jpg",
+      titel: "...",
+      beschreibung: "..."
+    },
+
+    {
+      datei: "Grimma-Hängebrücke-2013-8.jpg",
+      titel: "...",
+      beschreibung: "..."
+    },
+
+    {
+      datei: "Grimma-Hängebrücke-2013-10.jpg",
+      titel: "...",
+      beschreibung: "..."
+    },
+
+     {
+      datei: "G-13-6.JPG",
+      titel: "...",
+      beschreibung: "..."
+    },
+
+    {
+      datei: "G-13-25.JPG",
+      titel: "...",
+      beschreibung: "..."
+    },
+
+    {
+      datei: "G-13-26.JPG",
+      titel: "...",
+      beschreibung: "..."
+    },
+
+  ],
+
+};
+
+
+/* ==============================
+   BILDERSTRECKEN INITIALISIEREN
+   ============================== */
+
+document.querySelectorAll(".bilderstrecke")
+  .forEach((strecke) => {
+
+    const id = strecke.dataset.strecke;
+    const bilder = bilderstrecken[id];
+
+    if (!bilder || bilder.length === 0) {
+      console.warn(
+        "Keine Bilder für Bilderstrecke:", id
+      );
+      strecke.hidden = true;
+      return;
+    }
+
+    let aktuell = 0;
+
+    const bild =
+      strecke.querySelector(".strecken-bild");
+
+    const titel =
+      strecke.querySelector(".bildtitel");
+
+    const beschreibung =
+      strecke.querySelector(".bildbeschreibung");
+
+    const zaehler =
+      strecke.querySelector(".bildzaehler");
+
+    const zurueck =
+      strecke.querySelector(".zurueck");
+
+    const weiter =
+      strecke.querySelector(".weiter");
+
+
+    /* FOTO ANZEIGEN */
+
+    function anzeigen() {
+
+      const foto = bilder[aktuell];
+
+      bild.src = foto.datei;
+      bild.alt = foto.titel;
+
+      titel.textContent = foto.titel;
+
+      beschreibung.textContent =
+        foto.beschreibung;
+
+      zaehler.textContent =
+        `Foto ${aktuell + 1} von ${bilder.length}`;
+
+    }
+
+
+    /* VORHERIGES FOTO */
+
+    zurueck.addEventListener("click", () => {
+
+      aktuell =
+        (aktuell - 1 + bilder.length)
+        % bilder.length;
+
+      anzeigen();
+
+    });
+
+
+    /* NÄCHSTES FOTO */
+
+    weiter.addEventListener("click", () => {
+
+      aktuell =
+        (aktuell + 1) % bilder.length;
+
+      anzeigen();
+
+    });
+
+
+    /* ERSTES FOTO LADEN */
+
+    anzeigen();
+
+  });

@@ -140,6 +140,18 @@ neuerMarker(
   "Fotos aus Trebsen",
   "3-2-4-fotos-trebsen-2002.html"
 );
+neuerMarker(
+  "fotos",
+  [51.3550, 127100],
+  "Fotos aus Deuben",
+  "3-2-5-fotos-deuben-2002.html"
+);
+neuerMarker(
+  "fotos",
+  [51.3610, 12.7230],
+  "Fotos zwischen Bennewitz und Wurzen",
+  "3-2-6-fotos-bennewitz-wurzen-2002.html"
+);
 
 
 

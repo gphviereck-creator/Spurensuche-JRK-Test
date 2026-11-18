@@ -166,3 +166,10 @@ neuerMarker(
   "4-2-5-fotos-puechau-2013.html"
 );
 
+neuerMarker(
+  "fotos",
+  [51.3490, 12.7160],
+  "Fotos aus Schmölen 2013",
+  "4-2-6-fotos-schmoelen-2013.html"
+)
+
